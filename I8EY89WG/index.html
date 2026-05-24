@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rio Club Membership Pass - يوسف عبدالمنعم</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #0f172a; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; font-family: 'Cairo', sans-serif; }
+        .pass-card { width: 340px; height: 640px; background-color: #0d2139; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); color: #ffffff; position: relative; display: flex; flex-direction: column; overflow: hidden; border: 2px solid #f1b36e; }
+        .card-top-bg { position: absolute; top: 0; left: 0; width: 100%; height: 30%; background-image: linear-gradient(to right, #4ade80, #1d4ed8 50%, #fb923c); z-index: 1; clip-path: ellipse(80% 50% at 50% -10%); }
+        .logo-section { display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 15px; z-index: 10; }
+        .logo-section svg { width: 75px; height: auto; margin-bottom: 5px; }
+        .logo-title { font-size: 26px; font-weight: bold; margin: 0; color: #ffffff; }
+        .pass-type { font-size: 14px; color: #a0aec0; margin-top: 0; margin-bottom: 15px; letter-spacing: 0.5px; }
+        .main-entrance-text { font-size: 20px; font-weight: bold; margin-bottom: 20px; text-align: center; }
+        .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; width: 90%; margin: 0 auto; margin-bottom: 16px; }
+        .info-item { display: flex; flex-direction: column; align-items: center; padding: 6px 0; }
+        .info-label { font-size: 11px; color: #a0aec0; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 3px; }
+        .info-value { font-size: 16px; font-weight: bold; }
+        .primary-guest .info-value { font-size: 20px; margin-top: 2px; text-align: center; }
+        .access-tier .info-value { background-image: linear-gradient(to right, #38b449, #f27e1f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 15px; text-transform: capitalize; line-height: 1.2; text-align: center; }
+        .arrival-date .info-value { font-size: 16px; color: #f27e1f; }
+        .pass-footer { margin-top: auto; border-top: 1px solid #334e6e; padding: 12px 0; display: flex; justify-content: center; align-items: center; gap: 10px; position: relative; }
+        .ticket-id { font-family: 'Courier New', Courier, monospace; font-size: 13px; color: #a0aec0; }
+        .valid-dot { width: 9px; height: 9px; background-color: #38b449; border-radius: 50%; }
+        .valid-text { font-size: 14px; font-weight: bold; color: #38b449; }
+        .pass-card::before, .pass-card::after { content: ''; position: absolute; top: 50%; width: 18px; height: 18px; background-color: #0f172a; border: 2px solid #f1b36e; border-radius: 50%; z-index: 5; }
+        .pass-card::before { left: -10px; transform: translateY(-50%); }
+        .pass-card::after { right: -10px; transform: translateY(-50%); }
+    </style>
+</head>
+<body>
+    <div class="pass-card">
+        <div class="card-top-bg"></div>
+        <div class="logo-section">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="50,5 92,25 92,75 50,95 8,75 8,25" fill="#1C5AA0"/>
+                <polygon points="50,14 84,30 84,70 50,86 16,70 16,30" fill="#0d2139"/>
+                <circle cx="50" cy="48" r="18" fill="#38b449"/>
+                <path d="M36,52 Q50,26 64,52" stroke="#f27e1f" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+                <circle cx="50" cy="48" r="6" fill="#ffffff" />
+            </svg>
+            <p class="logo-title">RIO</p>
+            <p class="pass-type">تصريح النادي</p>
+        </div>
+        <p class="main-entrance-text z-10">المدخل الرئيسي</p>
+        <div class="info-grid z-10">
+            <div class="info-item primary-guest col-span-2">
+                <span class="info-label">العضو الأساسي</span>
+                <span class="info-value">يوسف عبدالمنعم</span>
+            </div>
+            <div class="info-item col-span-2">
+                <span class="info-label">تاريخ السداد</span>
+                <span class="info-value text-base text-center" style="color:#38b449">٢٤ مايو ٢٠٢٦</span>
+            </div>
+            <div class="info-item col-span-2">
+                <span class="info-label">المرافقين</span>
+                <span style="font-size:13px; font-weight:600; color:#cbd5e1; text-align:center; line-height:1.5;">احمد، سعيد</span>
+            </div>
+            <div class="info-item access-tier">
+                <span class="info-label">كود الاشتراك</span>
+                <span class="info-value">234556</span>
+            </div>
+            <div class="info-item arrival-date">
+                <span class="info-label">تاريخ الحجز</span>
+                <span class="info-value">٢٩ مايو ٢٠٢٦</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">أفراد الأسرة</span>
+                <span class="info-value">3</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">الضيوف</span>
+                <span class="info-value">1</span>
+            </div>
+        </div>
+        <div class="pass-footer z-10">
+            <div class="valid-dot"></div>
+            <span class="ticket-id">234556</span>
+            <span class="valid-text">صالح</span>
+        </div>
+    </div>
+</body>
+</html>
